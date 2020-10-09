@@ -19,9 +19,10 @@ function printMovies () {
     var i, count;
     count = 0;
     for (i = 0; i < allMovies.length; i++) {
-        console.log(allMovies[i].name + ", rating of " + allMovies[i].rating + ", havewatched: " + allMovies[i].havewatched);
+        console.log(allMovies[i].title + ", rating of " + allMovies[i].rating + ", havewatched: " + allMovies[i].havewatched);
         count = count + 1;
     }
+    console.log(" ");
     console.log("You have " + i + " movies in total");
 }
 
@@ -33,11 +34,12 @@ function highRatings (rating) {
     count = 0;
     for (i = 0; i < allMovies.length; i++) {
         if (allMovies[i].rating >= rating) {
-            console.log(allMovies[i].name + ", rating of " + allMovies[i].rating + ", havewatched: " + allMovies[i].havewatched);
+            console.log(allMovies[i].title + ", rating of " + allMovies[i].rating + ", havewatched: " + allMovies[i].havewatched);
             count = count + 1;
         }
     }
-    console.log("/nIn total, there are " + count + " matches");
+    console.log(" ");
+    console.log("In total, there are " + count + " matches");
 }
 
 //Toggle the 'haveWatched' property of the specified movie 
