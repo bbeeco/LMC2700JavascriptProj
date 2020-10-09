@@ -34,7 +34,7 @@ function highRatings (rating) {
     count = 0;
     for (i = 0; i < allMovies.length; i++) {
         if (allMovies[i].rating >= rating) {
-            console.log(allMovies[i].title + ", rating of " + allMovies[i].rating + ", havewatched: " + allMovies[i].havewatched);
+            console.log(allMovies[i].title + " has a rating of " + allMovies[i].rating);
             count = count + 1;
         }
     }
@@ -45,9 +45,10 @@ function highRatings (rating) {
 //Toggle the 'haveWatched' property of the specified movie 
 function changeWatched (title) {
     var i;
+    console.log("changing the status of the movie...")
     for (i = 0; i < allMovies.length; i++) {
         if (allMovies[i].title === title) {
-            if (allMovies[i].havewatched == true) {
+            if (allMovies[i].havewatched == true || allMovies[i].havewatched == "true") {
                 allMovies[i].havewatched = false;
             }
             else {
